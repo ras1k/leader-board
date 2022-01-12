@@ -1,6 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=The+Nautigal&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'The Nautigal', cursive; */
+    background-color: #E5E5E5;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: #FFFFFFFF;
+    width: 870px;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 10px;
+}
+.player-name{
+    margin-left: 16px;
+}
+.section-title{
+    font-family: Poppins;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: 36px;
+letter-spacing: 0em;
+text-align: left;
+color: #562EFF;
+
+}
+hr{
+    border: 1px solid #D1D1D1;
+    margin-top: 21px;
+    margin-bottom: 27px;
+}
 .players{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px ;
 }
 .player img{
     height: 56px;
@@ -10,4 +48,56 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.blog .thumbnail img{
+    width: 177px;
+    height: 117px;
+}
+.blog{
+    display: flex;
+}
+.blog-info{
+    margin-left: 16px;
+}
+.blog-title{
+    font-size: 20px;
+    padding-bottom: -5px;
+}
+.blog-author{
+    font-size: 16px;
+    color: #9F9F9F;
+}
+.author-name a{
+text-decoration: none;
+font-size: 16px;
+color: #9F9F9F;
+}
+.blogs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.course .course-banner img{
+    width: 224px;
+    height: 104px;
+}
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+    
+}
+@media only screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
